@@ -14,7 +14,7 @@ const Navbar = () => {
               <p>TK Figures</p>
             </div>
         <ul className="nav-menu">
-            <li onClick={() => {setMenu("hotfigures")}}><Link style={{ textDecoration: 'none' }} to='/'>Hot Figures</Link>{menu==="hotfigures"?<hr/>:<></>}</li>
+            <li onClick={() => {setMenu("figures")}}><Link style={{ textDecoration: 'none' }} to='/'>Figures</Link>{menu==="figures"?<hr/>:<></>}</li>
             <li onClick={() => {setMenu("leagueoflegend")}}><Link style={{ textDecoration: 'none' }} to='/leagueoflegend'>League of legend</Link>{menu==="leagueoflegend"?<hr/>:<></>}</li>
             <li onClick={() => {setMenu("Dc&Marvel")}}><Link style={{ textDecoration: 'none' }} to='/Dc&Marvel'>Dc&Marvel</Link>{menu==="Dc&Marvel"?<hr/>:<></>}</li>            
             <li onClick={() => {setMenu("Anime")}}><Link style={{ textDecoration: 'none' }} to='/Anime'>Anime</Link>{menu==="Anime"?<hr/>:<></>}</li>
