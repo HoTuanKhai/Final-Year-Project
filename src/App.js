@@ -7,6 +7,7 @@ import Figures from './Pages/Figures';
 import FigureCategory from './Pages/FigureCategory';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
@@ -16,14 +17,15 @@ function App() {
       <Routes>
         <Route path='/' element={<Figures/>}/>
         <Route path='/leagueoflegend' element={<FigureCategory category="leagueoflegend"/>}/>
-        <Route path='/Dc&Marvel' element={<FigureCategory category="dc&marvel"/>}/>
-        <Route path='/Anime' element={<FigureCategory category="anime"/>}/>
+        <Route path='/Onepiece' element={<FigureCategory category="onepiece"/>}/>
+        <Route path='/Pokemon' element={<FigureCategory category="pokemon"/>}/>
         <Route path='/product' element={<Product/>}>
           <Route path=':productId' element={<Product/>}/>
         </Route>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<LoginSignup/>}/>
       </Routes>
+      <Footer/>
       </BrowserRouter>
     </div>
   );
