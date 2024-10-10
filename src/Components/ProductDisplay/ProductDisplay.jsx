@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './ProductDisplay.css'
 import star_icon from "../Asset/star_icon.png"
 import star_dull_icon from "../Asset/star_dull_icon.png"
+import { ShopContext } from '../../Context/ShopContext'
 
 const ProductDisplay = (props) => {
     const {product} = props;
+    const {addToCart} = useContext(ShopContext);
     return(
         <div className="productdisplay">
             <div className="productdisplay-left">
@@ -40,7 +42,7 @@ const ProductDisplay = (props) => {
                 worthy of champions! Jinx has 12 points of articulation, so you can display the figure in various poses. 
                 It includes a Pow-Pow Mini Gun and Fishbones Rocket launcher accessory to bring your champion to life.
                 </div>
-                <button>ADD TO CART</button>
+                <button onClick={()=>{addToCart(product.id)}}>ADD TO CART</button>
             </div>
         </div>
     )
